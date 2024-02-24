@@ -1,0 +1,82 @@
+</body>
+</html>
+
+
+<footer>
+     <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <a class="nav-link active text-white" style="margin-top: 10px;" href="/apartments">Apartments</a>
+                <a class="nav-link active text-white" style="margin-top: 5px;" href="/hospital">Hospital</a>
+                <a class="nav-link active text-white" style="margin-top: 5px;" href="/airport">Airport</a>
+              </div>
+              <div class="col">
+                <a class="nav-link active text-white" style="margin-top: 10px;" href="/beaches">Beaches</a>
+                <a class="nav-link active text-white" style="margin-top: 5px;" href="/restaurants">Restaurants</a>
+                <a class="nav-link active text-white" style="margin-top: 5px;" href="/bars">Drink Bars</a>
+              </div>
+              <div class="col">
+                <a class="nav-link active text-white" style="margin-top: 10px;" href="/super_markets">Super Markets</a>
+                <a class="nav-link active text-white" style="margin-top: 5px;" href="/banks">Banks</a>
+                <a class="nav-link active text-white" style="margin-top: 5px;" href="/contact">Contact</a>
+              </div>
+
+
+              <div class="col">
+                <span class="navbar-text text-white" style="margin-right: 40px; margin-top: 10px;">
+                  <a class="social-icon" target="_blank" href="#"><i class="fa fa-facebook" style="font-size: 25px;"></i></a>
+                </span>
+
+                <span class="navbar-text text-white" style="margin-right: 40px; margin-top: 10px;">
+                  <a class="social-icon" target="_blank" href="#"><i class="fa fa-instagram" style="font-size: 25px;"></i></a>
+                </span>
+
+                <span class="navbar-text text-white" style="margin-right: 40px; margin-top: 5px;">
+                  <i class="fa fa-phone"></i> 123-456-7890
+                </span>
+
+                <span class="navbar-text text-white" style="margin-left: 40px;">
+                  <i class="fa fa-envelope"></i> example@example.com
+                </span>
+              </div>
+
+
+            </div>
+        </div>
+  </footer>
+</footer>
+
+
+
+
+
+<script>
+
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>

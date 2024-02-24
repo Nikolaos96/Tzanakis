@@ -1,0 +1,288 @@
+﻿@media screen and (min-width:777px){
+        .nav-link {
+          padding:18px 0;
+          min-width:120px;
+        }
+        .navbar {
+          padding: 0
+        }
+      }
+
+
+.carousel-item img {
+    max-height: 600px; /* Εδώ μπορείτε να ορίσετε το επιθυμητό μέγιστο ύψος */
+  }
+
+
+.h1_1 {
+  text-align: center;
+}
+
+
+.container {
+  text-align: center; /* Κείμενο ευθυγραμμίζεται στο κέντρο */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  margin: 10px; /* Προσαρμόστε το περιθώριο ανάλογα με τις ανάγκες σας */
+}
+
+.center-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.center-card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.card {
+  width: 18rem;
+  /* Προσαρμόστε το περιθώριο και άλλα στυλ καρτών ανάλογα με τις ανάγκες σας */
+}
+
+.p1 {
+  margin-bottom: 100px;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+
+#carouselExampleIndicators {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators1 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators3 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators4 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators5 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators6 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators7 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators8 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators9 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators10 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators11 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators12 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators13 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#carouselExampleIndicators14 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators15 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators16 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators17 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators18 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators19 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators20 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators21 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#carouselExampleIndicators22 {
+    margin-top: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    margin-bottom: 0px; /* Προσαρμόστε την τιμή ανάλογα με τις ανάγκες σας */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
