@@ -2,12 +2,12 @@
         .nav-link {
           padding:18px 0;
           min-width:120px;
+          color: white;
         }
         .navbar {
           padding: 0
         }
       }
-
 
 .carousel-item img {
     max-height: 600px; /* Εδώ μπορείτε να ορίσετε το επιθυμητό μέγιστο ύψος */
