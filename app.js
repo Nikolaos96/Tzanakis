@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const bodyParser = require('body-parser');
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -8,11 +9,11 @@ const port = process.env.PORT || 3000
 // Define paths for Express config
 //---------------------------------
 // einai ta monopatia gia tous katalogous
-const publicDirectoryPath = path.join(__dirname, '../public')
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPath = path.join(__dirname, '../templates/partials')
+const publicDirectoryPath = path.join(__dirname, 'public')
+const viewsPath = path.join(__dirname, 'templates/views')
+const partialsPath = path.join(__dirname, 'templates/partials')
 
-
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'hbs')
 // edw allazei to default monopati gia ta views ( gia ta arxeia me kataliksi .hbs)
 app.set('views', viewsPath)
@@ -21,10 +22,22 @@ app.use(express.static(publicDirectoryPath))
 
 
 //-------------------------------------------------------------------------------
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index')
 })
 //--------------------------------------------------------------------------------
+app.get('/rent', (req, res) => {
+    res.render('rent')
+})
+
+app.post('/email_me', (req, res) => {
+
+    console.log(req.body.name);
+    console.log(req.body.email);
+    console.log(req.body.message);
+
+    res.redirect('/')
+})
 
 app.get('/apartments', (req, res) => {
     res.render('apartments')

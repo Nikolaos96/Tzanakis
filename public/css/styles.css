@@ -62,10 +62,20 @@
   display: none;
 }
 
+.required {
+  color:red; 
+  font-weight:bold
+} 
+.human {margin: 0 0 0 12px}
 
 
 
 
+
+.footer {
+  clear: both;
+  position: relative;
+}
 
 
 

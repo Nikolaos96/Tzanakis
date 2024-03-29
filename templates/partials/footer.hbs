@@ -2,8 +2,8 @@
 </html>
 
 
-<footer>
-     <footer class="text-white text-center py-3" style="background-color: #3D5868;">
+
+     <footer class="text-white text-center py-3 footer" style="background-color: #3D5868;">
         <div class="container">
             <div class="row">
               <div class="col">
@@ -44,12 +44,20 @@
 
             </div>
         </div>
-  </footer>
-</footer>
+      </footer>
 
 
 
-
+<script>
+  window.addEventListener("scroll", function() {
+  var footer = document.getElementById("footer");
+  if (window.pageYOffset > document.body.scrollHeight - window.innerHeight - 50) {
+    footer.style.display = "block";
+  } else {
+    footer.style.display = "none";
+  }
+});
+</script>
 
 <script>
 
