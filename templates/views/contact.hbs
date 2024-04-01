@@ -10,22 +10,32 @@
 <div class="container">
 	<div class="row">
 		<div class="col">
-			<h5>Do you have a question ?</h5> <br> <br>
-			<form action="/email_me" method="POST">
+			<h5>How can i help you ?</h5> <br> <br>
+			<form action="/email_me" method="POST" id="captcha-form2">
 				<div class="form-group">
-					<input name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" required> 
+					<input type="email" name="email" class="form-control" placeholder="Enter your email" required>
 				</div>
 
 				<div class="form-group">
-					<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" required>
+					<input name="subject" class="form-control" placeholder="Enter the subject" required> 
 				</div>
 
 				<div class="form-group">
 					<textarea class="form-control" name="message" rows="5" placeholder="Enter your message..." required></textarea>
-					<small id="emailHelp" class="form-text text-muted">All fields are required.</small>
-					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					<small class="form-text text-muted">All fields are required.</small>
+					<small class="form-text text-muted">We'll never share your email with anyone else.</small>
 				</div>
 
+				<div class="form-group">
+					<div class="d-flex align-items-center">
+						<canvas id="captcha2" width="200" height="80" style="margin-left: 80px;"></canvas>
+						<button type="button" class="btn btn-secondary" id="refresh-captcha2">
+							<i class="fa fa-refresh"></i>
+						</button>
+					</div>
+
+					<input type="text" class="form-control" placeholder="Enter Captcha" id="captcha-input2" required>
+				</div>
 
 				<br>
 				<button type="submit" class="btn btn-primary">Send Email</button>
@@ -44,4 +54,77 @@
 
 
 <br><br><br><br><br><br><br>
+
+
+<script>
+$(document).ready(function () {
+    // Generate captcha on page load
+    generateCaptcha();
+
+    // Handle captcha refresh button click
+    $("#refresh-captcha2").click(function () {
+        generateCaptcha();
+        $("#captcha-input2").val("");
+    });
+
+    // Handle form submit
+    $("#captcha-form2").submit(function (event) {
+        event.preventDefault();
+
+        // Validate captcha
+        var captchaInput = $("#captcha-input2").val();
+        var captchaCode = sessionStorage.getItem("captchaCode");
+        if (captchaInput != captchaCode) {
+            alert("Invalid captcha code. Please try again.");
+            generateCaptcha();
+            $("#captcha-input2").val("");
+            return;
+        }
+
+        // Captcha validation successful, submit form
+        $("#captcha-form2").unbind('submit').submit();
+    });
+
+    // Define the function generateCaptcha()
+    function generateCaptcha() {
+        var canvas = $("#captcha2")[0];
+        var context = canvas.getContext("2d");
+
+        // Clear the canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Define the string of characters that can be included in the captcha
+        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var captchaCode = "";
+
+        // Generate each character of the captcha
+        for (var i = 0; i < 6; i++) {
+            // Select random letter from the pool to be part of the captcha
+            var character = characters.charAt(Math.floor(Math.random() * characters.length));
+            captchaCode += character;
+
+            // Set up the text formatting
+            var fontSize = 20 + Math.random() * 10;
+            context.font = fontSize + "px Arial";
+            context.textAlign = "center";
+            context.textBaseline = "middle";
+
+            // Set the color of the text
+            context.fillStyle = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+
+            // Add the character to the canvas
+            var angle = -45 + Math.random() * 90;
+            context.translate(20 + i * 30, canvas.height / 2);
+            context.rotate(angle * Math.PI / 180);
+            context.fillText(character, 0, 0);
+            context.rotate(-angle * Math.PI / 180);
+            context.translate(-(20 + i * 30), -canvas.height / 2);
+        }
+
+        // Set the captcha code in session storage
+        sessionStorage.setItem("captchaCode", captchaCode);
+    }
+});
+</script>
+
 {{>footer}}

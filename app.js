@@ -2,9 +2,10 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
-const app = express()
-const port = process.env.PORT || 3000
+const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 //---------------------------------
@@ -22,22 +23,85 @@ app.use(express.static(publicDirectoryPath))
 
 
 //-------------------------------------------------------------------------------
+
+
 app.get('/', (req, res) => {
     res.render('index')
 })
-//--------------------------------------------------------------------------------
+
 app.get('/rent', (req, res) => {
     res.render('rent')
 })
 
+app.get('/email_me', (req, res) => {
+    res.render('email_me')
+})
+
+const transporter = nodemailer.createTransport({
+    host: 'premium123.web-hosting.com',
+    port: 465, // Η προεπιλεγμένη πόρτα για το SMTP SSL είναι η 465
+    secure: true, // Χρησιμοποιήστε SSL
+    auth: {
+      user: 'info@revel-properties.com', // Η διεύθυνση email σας στο cPanel
+      pass: 'Tzankon1234@', // Ο κωδικός πρόσβασής σας στο cPanel
+    },
+});
+
 app.post('/email_me', (req, res) => {
 
-    console.log(req.body.name);
-    console.log(req.body.email);
-    console.log(req.body.message);
-
-    res.redirect('/')
+    try{
+        const mailOptions = {
+            from: 'info@revel-properties.com',
+            to: 'info@revel-properties.com',
+            subject: 'Sender: ' + req.body.email + " Say: " + req.body.subject,
+            text: "From: " + req.body.email + "\n" + "Subject: " + req.body.subject + "\n\n" + req.body.message
+        };
+    
+        transporter.sendMail(mailOptions, function(err, info) {
+            if (err) {
+              console.error('Σφάλμα κατά την αποστολή:', err);
+              res.redirect('contact');
+            } else{
+                console.log('Email στάλθηκε');
+                res.redirect('contact');
+            }
+        });
+    }catch{
+        res.redirect('contact');
+    }
 })
+
+app.post('/email_me2', (req, res) => {
+
+    try{
+        const mailOptions = {
+            from: 'info@revel-properties.com',
+            to: 'info@revel-properties.com',
+            subject: 'Sender: ' + req.body.email + " Say: " + req.body.subject,
+            text: "From: " + req.body.email + "\n" + "Subject: " + req.body.subject + "\n\n" + req.body.message
+        };
+    
+        transporter.sendMail(mailOptions, function(err, info) {
+            if (err) {
+              console.error('Σφάλμα κατά την αποστολή:', err);
+              res.redirect('/');
+            } else{
+                console.log('Email στάλθηκε');
+                res.redirect('/');
+            }
+        });
+    }catch{
+        res.redirect('/');
+    }
+})
+
+app.get('/contact', (req, res) => {
+     res.render('contact');
+})
+
+
+//--------------------------------------------------------------------------------
+
 
 app.get('/apartments', (req, res) => {
     res.render('apartments')
@@ -74,10 +138,9 @@ app.get('/hospital', (req, res) => {
     res.render('hospital')
 })
 
-app.get('/contact', (req, res) => {
-    res.render('contact')
-})
+
 //--------------------------------------------------------------------------------
+
 
 app.get('/greek', (req, res) => {
     res.render('index_greek')

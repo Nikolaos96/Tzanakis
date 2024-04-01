@@ -1,90 +1,224 @@
-</body>
-</html>
 
 
+    <br> <br>
 
-     <footer class="text-white text-center py-3 footer" style="background-color: #3D5868;">
-        <div class="container">
-            <div class="row">
-              <div class="col">
-                <a class="nav-link active text-white" style="margin-top: 10px;" href="/apartments">Apartments</a>
-                <a class="nav-link active text-white" style="margin-top: 5px;" href="/hospital">Hospital</a>
-                <a class="nav-link active text-white" style="margin-top: 5px;" href="/airport">Airport</a>
-              </div>
-              <div class="col">
-                <a class="nav-link active text-white" style="margin-top: 10px;" href="/beaches">Beaches</a>
-                <a class="nav-link active text-white" style="margin-top: 5px;" href="/restaurants">Restaurants</a>
-                <a class="nav-link active text-white" style="margin-top: 5px;" href="/bars">Drink Bars</a>
-              </div>
-              <div class="col">
-                <a class="nav-link active text-white" style="margin-top: 10px;" href="/super_markets">Super Markets</a>
-                <a class="nav-link active text-white" style="margin-top: 5px;" href="/banks">Banks</a>
-                <a class="nav-link active text-white" style="margin-top: 5px;" href="/contact">Contact</a>
-              </div>
-
-
-              <div class="col">
-                <span class="navbar-text text-white" style="margin-right: 40px; margin-top: 10px;">
+      <footer class="text-center text-lg-start" style="background-color: #3D5868;">
+        
+        <section class="">
+          <br>
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h5 class="fw-bold mb-4 text-white">
+                  Find us
+                </h5>
+                
+                <span class="navbar-text text-white" style="margin-right: 30px; margin-top: 0px;">
                   <a class="social-icon text-white" target="_blank" href="#"><i class="fa fa-facebook" style="font-size: 25px;"></i></a>
                 </span>
-
-                <span class="navbar-text text-white" style="margin-right: 40px; margin-top: 10px;">
+                <span class="navbar-text text-white" style="margin-right: 0px; margin-top: 0px;">
                   <a class="social-icon text-white" target="_blank" href="#"><i class="fa fa-instagram" style="font-size: 25px;"></i></a>
                 </span>
 
-                <span class="navbar-text text-white" style="margin-right: 40px; margin-top: 5px;">
-                  <i class="fa fa-phone"></i> 123-456-7890
-                </span>
+                <p></p>
+                <p>
+                  <span class="navbar-text text-white" style="margin-right: 0px; margin-top: 0px;"></span>
+                    <i class="fa fa-envelope fa-2x text-white" data-toggle="modal" data-target="#myModal" style="cursor: pointer;"></i>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="myModalLabel">Contact Form</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                   <form action="/email_me2" method="POST" id="captcha-form">
+                                    <div class="form-group">
+                                      <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                    </div>
 
-                <span class="navbar-text text-white" style="margin-left: 40px;">
-                  <i class="fa fa-envelope"></i> example@example.com
-                </span>
+                                    <div class="form-group">
+                                      <input name="subject" class="form-control" placeholder="Enter the subject" required> 
+                                    </div>
+
+                                    <div class="form-group">
+                                      <textarea class="form-control" name="message" rows="5" placeholder="Enter your message..." required></textarea>
+                                      <small class="form-text text-muted">All fields are required.</small>
+                                      <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <div class="d-flex align-items-center">
+                                        <canvas id="captcha" width="200" height="80" style="margin-left: 80px;"></canvas>
+                                        <button type="button" class="btn btn-secondary" id="refresh-captcha">
+                                          <i class="fa fa-refresh"></i>
+                                        </button>
+                                      </div>
+
+                                      <input type="text" class="form-control" placeholder="Enter Captcha" id="captcha-input" required>
+                                    </div>
+
+                                    <br>
+                                    <button type="submit" class="btn btn-primary">Send Email</button>
+                                  </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </span>
+                </p>
               </div>
 
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                
+                <p>
+                  <a href="/apartments" class="text-white">Apartments</a>
+                </p>
+                <p>
+                  <a href="/rent" class="text-white">Rent</a>
+                </p>
+                <p>
+                  <a href="/hospital" class="text-white">Hospital</a>
+                </p>
+                <p>
+                  <a href="/airport" class="text-white">Airport</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <p>
+                  <a href="/beaches" class="text-white">Beaches</a>
+                </p>
+                <p>
+                  <a href="/restaurants" class="text-white">Restaurants</a>
+                </p>
+                <p>
+                  <a href="/bars" class="text-white">Drink Bars</a>
+                </p>
+                <p>
+                  <a href="/super_markets" class="text-white">Super Markets</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <p>
+                  <a href="/banks" class="text-white">Banks</a>
+                </p>
+                <p>
+                  <a href="/contact" class="text-white">Contact</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">xxxx</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">yyyy</a>
+                </p>
+              </div>
+              
+              <div class="col-md-5 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
+                <p><i class="fa fa-phone me-3"></i>  (+30) 6948203074</p>
+                <p><i class="fa fa-envelope me-3"></i> info@revel-properties.com</p>
+                <p><i class="fa fa-home me-3"></i> Sarakina Paleochora, Crete, 73001, Greece  </p>
+              </div>
 
             </div>
+          </div>
+        </section>
+
+        <hr class="text-white">
+
+        <!-- Copyright -->
+        <div class="text-center p-4 text-white" style="background-color: #3D5868;">
+          Created by 
+          <a class="text-reset fw-bold" target="_blank" href="https://nmakr.revel-properties.com/"><b>Nikos Makrygeorgos</b></a>
         </div>
+        <!-- Copyright -->
       </footer>
 
 
 
+
+    </body> 
+  </html>
+
+
+
 <script>
-  window.addEventListener("scroll", function() {
-  var footer = document.getElementById("footer");
-  if (window.pageYOffset > document.body.scrollHeight - window.innerHeight - 50) {
-    footer.style.display = "block";
-  } else {
-    footer.style.display = "none";
-  }
+$(document).ready(function () {
+    // Generate captcha on page load
+    generateCaptcha();
+
+    // Handle captcha refresh button click
+    $("#refresh-captcha").click(function () {
+        generateCaptcha();
+        $("#captcha-input").val("");
+    });
+
+    // Handle form submit
+    $("#captcha-form").submit(function (event) {
+        event.preventDefault();
+
+        // Validate captcha
+        var captchaInput = $("#captcha-input").val();
+        var captchaCode = sessionStorage.getItem("captchaCode");
+        if (captchaInput != captchaCode) {
+            alert("Invalid captcha code. Please try again.");
+            generateCaptcha();
+            $("#captcha-input").val("");
+            return;
+        }
+
+        // Captcha validation successful, submit form
+        $("#captcha-form").unbind('submit').submit();
+    });
+
+    // Define the function generateCaptcha()
+    function generateCaptcha() {
+        var canvas = $("#captcha")[0];
+        var context = canvas.getContext("2d");
+
+        // Clear the canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Define the string of characters that can be included in the captcha
+        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var captchaCode = "";
+
+        // Generate each character of the captcha
+        for (var i = 0; i < 6; i++) {
+            // Select random letter from the pool to be part of the captcha
+            var character = characters.charAt(Math.floor(Math.random() * characters.length));
+            captchaCode += character;
+
+            // Set up the text formatting
+            var fontSize = 20 + Math.random() * 10;
+            context.font = fontSize + "px Arial";
+            context.textAlign = "center";
+            context.textBaseline = "middle";
+
+            // Set the color of the text
+            context.fillStyle = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+
+            // Add the character to the canvas
+            var angle = -45 + Math.random() * 90;
+            context.translate(20 + i * 30, canvas.height / 2);
+            context.rotate(angle * Math.PI / 180);
+            context.fillText(character, 0, 0);
+            context.rotate(-angle * Math.PI / 180);
+            context.translate(-(20 + i * 30), -canvas.height / 2);
+        }
+
+        // Set the captcha code in session storage
+        sessionStorage.setItem("captchaCode", captchaCode);
+    }
 });
-</script>
-
-<script>
-
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 </script>
